@@ -71,7 +71,7 @@ for (let i = 0; i < ourTeam.length; i++) {
             </div>
             <div class="text-center">
                 <h3>${member.fullName}</h3>
-                <p>Ruolo: ${member.role}</p>
+                <p>${member.role}</p>
             </div>
         </div>
     `;
