@@ -4,15 +4,6 @@
 // Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 // Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
-
-// BONUS 2:
-// Organizzare i singoli membri in card/schede
-
-/*------------------
-    FUNCTIONS
---------------------*/
 /*------------------
     MAIN
 --------------------*/
@@ -57,22 +48,33 @@ const ourTeam = [
 // Stampo in console l'array degli oggetti
 console.log(ourTeam);
 
-const membersContainer = document.getElementById('list');
+// const membersContainer = document.getElementById('list');
+const membersContainer = document.querySelector('.items');
 
 // Con un ciclo FOR stampo in console ogni OGGETTO dell'ARRAY 
 for (let i = 0; i < ourTeam.length; i++) {
-    const member = ourTeam[i];
+    let member = ourTeam[i];
     console.log(member);
 
     // MILESTONE 2:
     // Stampare le stesse informazioni su DOM sottoforma di stringhe
-    const listItem = `
-        <li>
-            <h4>${member.fullName}</h4>
-            <p>Ruolo: ${member.role}</p>
-            <p>Foto: ${member.image}</p>
-        </li>
+
+    // BONUS 1:
+    // Trasformare la stringa foto in una immagine effettiva
+
+    // BONUS 2:
+    // Organizzare i singoli membri in card/schede
+    const boxItem = `
+        <div class="box-item">
+            <div class="img-item">
+                <img src="img/${member.image}" alt="">
+            </div>
+            <div class="text-center">
+                <h3>${member.fullName}</h3>
+                <p>Ruolo: ${member.role}</p>
+            </div>
+        </div>
     `;
-    membersContainer.innerHTML += listItem;
+    membersContainer.innerHTML += boxItem;
 };
 
