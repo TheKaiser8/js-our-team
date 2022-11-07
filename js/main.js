@@ -11,9 +11,6 @@
 // Scott Estrada	Developer	scott-estrada-developer.jpg
 // Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
@@ -64,3 +61,14 @@ const ourTeam = [
         image: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+// MILESTONE 1:
+// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+// Stampo in console l'array degli oggetti
+console.log(ourTeam);
+
+// Con un ciclo FOR stampo in console ogni OGGETTO dell'ARRAY 
+for (let i = 0; i < ourTeam.length; i++) {
+    const member = ourTeam[i];
+    console.log(member);
+}
