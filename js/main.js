@@ -4,16 +4,6 @@
 // Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
 // Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
 
-// Wayne Barnett	Founder & CEO	wayne-barnett-founder-ceo.jpg
-// Angela Caroll	Chief Editor	angela-caroll-chief-editor.jpg
-// Walter Gordon	Office Manager	walter-gordon-office-manager.jpg
-// Angela Lopez	Social Media Manager	angela-lopez-social-media-manager.jpg
-// Scott Estrada	Developer	scott-estrada-developer.jpg
-// Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
-
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
-
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
 
@@ -60,15 +50,29 @@ const ourTeam = [
         role: 'Graphic Designer',
         image: 'barbara-ramos-graphic-designer.jpg'
     }
-]
+];
 
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 // Stampo in console l'array degli oggetti
 console.log(ourTeam);
 
+const membersContainer = document.getElementById('list');
+
 // Con un ciclo FOR stampo in console ogni OGGETTO dell'ARRAY 
 for (let i = 0; i < ourTeam.length; i++) {
     const member = ourTeam[i];
     console.log(member);
-}
+
+    // MILESTONE 2:
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+    const listItem = `
+        <li>
+            <h4>${member.fullName}</h4>
+            <p>Ruolo: ${member.role}</p>
+            <p>Foto: ${member.image}</p>
+        </li>
+    `;
+    membersContainer.innerHTML += listItem;
+};
+
